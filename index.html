@@ -4,20 +4,22 @@
     <title>timer-js</title>
 </head>
 <body>
-    <h2 id="antoine">10</h2>
+    <h2 id="antoine">3</h2>
 
 <script>
 var myElement = document.getElementById("antoine");
-alert (myElement.innerHTML)
-alert (myElement.innerHTML-1)
-alert (myElement.innerHTML-2)
-alert (myElement.innerHTML-3)
-alert (myElement.innerHTML-4)
-alert (myElement.innerHTML-5)
-alert (myElement.innerHTML-6)
-alert (myElement.innerHTML-7)
-alert (myElement.innerHTML-8)
-alert (myElement.innerHTML-9)
+
+var myInterval = setInterval(myTimer, 1000);
+
+function myTimer() {
+  document.getElementById("antoine").innerHTML = myElement.innerHTML-1;
+  console.log (myElement.innerHTML)
+  if(myElement.innerHTML == 0) {
+    clearInterval(myInterval);
+    window.location = "https://geekprank.com/fake-virus/";
+  }
+} 
+
 </script>
 
 </body>
